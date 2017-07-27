@@ -6,9 +6,21 @@
 	"tables": [
 		{
 			"tablename": "raw_proveedores",
-			"override": false,
+			"override": true,
 			"files": [
 				"Data/proveedores.csv"
+			]
+		},
+		{
+			"tablename": "raw_compradores",
+			"override": false,
+			"files": [
+			]
+		},
+		{
+			"tablename": "raw_adjudicaciones",
+			"override": false,
+			"files": [
 			]
 		}
 	]
