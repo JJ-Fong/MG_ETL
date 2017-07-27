@@ -1,0 +1,15 @@
+{
+	"hostname": "localhost",
+	"database": "gobhash_analysis",
+	"username": "gobhash",
+	"password": "GobhashPSW2017!",
+	"tables": [
+		{
+			"tablename": "raw_proveedores",
+			"override": false,
+			"files": [
+				"Data/proveedores.csv"
+			]
+		}
+	]
+}
