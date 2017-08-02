@@ -1,0 +1,70 @@
+	{
+		"tables": [
+			{
+				"tablename": "raw_proveedores", 
+				"fields": [
+					{
+						"name": "DEPARTAMENTO",
+						"type": "GEO"
+					},
+					{
+						"name": "REP_LEGAL",
+						"type": "TXT"
+					},
+					{
+						"name": "MUNICIPIO",
+						"type": "GEO"
+					},
+					{
+						"name": "TIPO",
+						"type": "TXT"
+					},
+					{
+						"name": "INSCRIPCION_RM",
+						"type": "DATE"
+					},
+					{
+						"name": "NOMBRE",
+						"type": "TXT"
+					},
+					{
+						"name": "ACTIV_ECONOMICA",
+						"type": "TXT"
+					},
+					{
+						"name": "NIT",
+						"type": "TXT"
+					}
+				]
+			},
+			{
+				"tablename": "raw_compradores", 
+				"fields": [
+					{
+						"name": "ENTIDAD_SUPERIOR",
+						"type": "TXT"
+					},
+					{
+						"name": "DEPARTAMENTO",
+						"type": "GEO"
+					},
+					{
+						"name": "ORIGEN_FONDOS",
+						"type": "TXT"
+					},
+					{
+						"name": "NOMBRE",
+						"type": "TXT"
+					},
+					{
+						"name": "MUNICIPIO",
+						"type": "GEO"
+					},
+					{
+						"name": "NIT",
+						"type": "TXT"
+					}
+				]
+			}
+		]
+	}
