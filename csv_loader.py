@@ -62,7 +62,7 @@ if (flag):
                     for (k,v) in row.items():
                         if k.upper() in fields:
                             query += str(k)+","
-                    print query
+                    
 
 
 
