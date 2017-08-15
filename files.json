@@ -1,0 +1,20 @@
+{
+	"files": [
+		{
+			"schema": "raw_proveedores",
+			"files": [
+				"Data/proveedores.csv"
+			]
+		},
+		{
+			"schema": "raw_compradores",
+			"files": [
+			]
+		},
+		{
+			"schema": "raw_adjudicaciones",
+			"files": [
+			]
+		}
+	]
+}	
