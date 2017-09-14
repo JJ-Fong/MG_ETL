@@ -9,11 +9,23 @@
 		{
 			"schema": "raw_compradores",
 			"files": [
+				"Data/2016/2016/febrero/compradores.csv",
+				"Data/2016/2016/marzo/compradores.csv",
+				"Data/2016/2016/abril/compradores.csv",
+				"Data/2016/2016/mayo/compradores.csv",
+				"Data/2016/2016/junio/compradores.csv",
+				"Data/2016/2016/julio/compradores.csv"
 			]
 		},
 		{
 			"schema": "raw_adjudicaciones",
 			"files": [
+				"Data/2016/2016/febrero/adjudicaciones.csv",
+				"Data/2016/2016/marzo/adjudicaciones.csv",
+				"Data/2016/2016/abril/adjudicaciones.csv",
+				"Data/2016/2016/mayo/adjudicaciones.csv",
+				"Data/2016/2016/junio/adjudicaciones.csv",
+				"Data/2016/2016/julio/adjudicaciones.csv"
 			]
 		}
 	]

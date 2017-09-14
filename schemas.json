@@ -65,6 +65,72 @@
 						"type": "TXT"
 					}
 				]
+			},
+			{
+				"tablename": "raw_adjudicaciones", 
+				"fields": [
+					{
+						"name": "CATEGORIA",
+						"type": "TXT"
+					},
+					{
+						"name": "STATUS",
+						"type": "TXT"
+					},
+					{
+						"name": "MONTO",
+						"type": "NMB"
+					},
+					{
+						"name": "NOG",
+						"type": "TXT"
+					},
+					{
+						"name": "NIT_PROVEEDOR",
+						"type": "TXT"
+					},
+					{
+						"name": "NIT_COMPRADOR",
+						"type": "TXT"
+					},
+					{
+						"name": "DESCRIPCION",
+						"type": "TXT"
+					},
+					{
+						"name": "FECHA_PUBLICADA",
+						"type": "DATE"
+					},
+					{
+						"name": "MODALIDAD_COMPRA",
+						"type": "TXT"
+					},
+					{
+						"name": "TIPO_OFERTAS",
+						"type": "TXT"
+					},
+					{
+						"name": "FECHA_PRESENTACION_OFERTAS",
+						"type": "DATE"
+					},
+					{
+						"name": "NOMBRE_COMPRADOR",
+						"type": "TXT"
+					},
+					{
+						"name": "UNIDADES",
+						"type": "TXT"
+					},
+					{
+						"name": "FECHA_ADJUDICADA",
+						"type": "DATE"
+					},
+					{
+						"name": "FECHA_CIERRE_OFERTAS",
+						"type": "DATE"
+					}
+					
+				]
 			}
 		]
 	}
