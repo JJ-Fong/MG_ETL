@@ -71,7 +71,7 @@
 				"fields": [
 					{
 						"name": "CATEGORIA",
-						"type": "TXT"
+						"type": "CATEGORY"
 					},
 					{
 						"name": "STATUS",

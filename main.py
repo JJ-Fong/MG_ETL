@@ -1,10 +1,13 @@
 # coding=utf-8
 import csv
 import json
-from collections import defaultdict
-import ghmodule
-from datetime import datetime
+from sanitizer import *
 import uuid
+from collections import defaultdict
+from datetime import datetime
+
+#Instancia del sanitizador
+sanitizer = mySanitizer() 
 
 #Carga de JSON con los esquemas de los modelos crudos
 with open('schemas.json') as schemasf:
@@ -55,28 +58,37 @@ for f in files["files"]:
                 if (flag):
                     with open(str(idn)+'.csv', 'ab') as newfile:
                         wr = csv.writer(newfile, delimiter='|')
+                        #wr.writerow(fieldName)
                         count = 0 
                         for row in reader:
-                            rec = []
-                            fc = 0
-                                    #if ((f["schema"] == 'raw_adjudicaciones')):
-                                            #print fn, row[fn], fieldType[fieldName.index(fn.upper())]
-                                    #    print count
-                                    #    print row
-                            for fn in csvfn:
-                                        
-                                rec.append(ghmodule.clean(row[fn],fieldType[fieldName.index(fn.upper())]))
-                                fc += 1
-                                    
-                                    #if ((f["schema"] == 'raw_adjudicaciones')and(count > 3070)):
-                                    #    print count, sfile, rec
-
-                            frec = []
-                            for item in rec:
-                                try:
-                                    frec.append(item.encode('utf-8'))
-                                except:
-                                    frec.append(item) 
-                            wr.writerow(frec)
+                            #registros a insertar
+                            records = [[]]
+                            for field in csvfn:
+                                value = row[field]
+                                value = value.split("~")
+                                if (len(value)>1):
+                                    nrecords = []
+                                    for i in range(len(value)):     
+                                        for j in range(len(records)):
+                                            nrec = []
+                                            for k in range(len(records[j])):
+                                                nrec.append(records[j][k])
+                                            nrecords.append(nrec)
+                                    records = nrecords
+                                fTypeIndex = fieldName.index(field.upper())
+                                cv = 0
+                                rosize = int(len(records)/len(value))    
+                                for v in value:
+                                    nv = sanitizer.clean(v, fieldType[fTypeIndex], field.upper())
+                                    try:
+                                        nv = nv.encode('utf-8')
+                                    except:
+                                        nv = nv
+                                    for cc in range(rosize):
+                                        records[(cv*rosize)+cc].append(nv) 
+                                    cv += 1
+                            for rec in records:
+                                wr.writerow(rec)
                             count += 1
+                            
                             
