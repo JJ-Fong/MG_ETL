@@ -9,7 +9,7 @@ CREATE TABLE raw_adjudicaciones (
 	fecha_publicada date,
 	modalidad_compra varchar(256),
 	tipo_ofertas varchar(256),
-	fecha_presentacion_ofertas varchar(256),
+	fecha_presentacion_ofertas date,
 	nombre_comprador varchar(256),
 	unidades varchar(256),
 	fecha_adjudicada date,

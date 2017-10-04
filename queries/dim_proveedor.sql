@@ -1,5 +1,5 @@
 drop view dim_proveedor;
-create view dim_proveedor as (
+create materialized view dim_proveedor as (
 	select 
 		query.nit as id_proveedor,
 		query.*
@@ -24,7 +24,7 @@ create view dim_proveedor as (
 		from (
 			select distinct
 				*
-			from raw_proveedores_test1
+			from raw_proveedores
 		) a
 	) query 
 )

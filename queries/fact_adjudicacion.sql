@@ -1,4 +1,4 @@
-create view fact_adjudicacion as (
+create materialized view fact_adjudicacion as (
 	select 
 		concat(query.categoria,'|',query.id_proveedor,'|',query.id_comprador,'|',query.nog) as id_adjudicacion, 
 		query.*
@@ -19,7 +19,7 @@ create view fact_adjudicacion as (
 		from (
 			select distinct
 			*
-			from raw_adjudicaciones_test1
+			from raw_adjudicaciones
 		) a
 	) query
 )

@@ -1,4 +1,4 @@
-create view dim_ubicacion as (
+create materialized view dim_ubicacion as (
 	select distinct 
 		case
 			when ((a.municipio is null) or (a.departamento is null)) then 'NO ASIGNADO'
@@ -16,11 +16,11 @@ create view dim_ubicacion as (
 		select distinct
 			municipio,
 			departamento
-		from raw_compradores_test1
+		from raw_compradores
 		union
 		select distinct
 			municipio,
 			departamento
-		from raw_proveedores_test1
+		from raw_proveedores
 	) a
 )

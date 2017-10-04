@@ -1,4 +1,4 @@
-create view dim_fecha as (
+create materialized view dim_fecha as (
 select distinct
 	a.fecha as fecha, 
 	date_part('year', a.fecha) as ano,
@@ -56,14 +56,14 @@ select distinct
 		else extract(dow from a.fecha) 
 	end dia_semana
 from (
-	select fecha_publicada as fecha from raw_adjudicaciones_test1
+	select fecha_publicada as fecha from raw_adjudicaciones
 	union
-	select fecha_adjudicada as fecha from raw_adjudicaciones_test1
+	select fecha_adjudicada as fecha from raw_adjudicaciones
 	union 
-	select fecha_cierre_ofertas as fecha from raw_adjudicaciones_test1
+	select fecha_cierre_ofertas as fecha from raw_adjudicaciones
 	union
-	select fecha_presentacion_ofertas as fecha from raw_adjudicaciones_test1
+	select fecha_presentacion_ofertas as fecha from raw_adjudicaciones
 	union
-	select inscripcion_rm as fecha from raw_proveedores_test1
+	select inscripcion_rm as fecha from raw_proveedores
 ) a
 )

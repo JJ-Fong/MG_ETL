@@ -1,7 +1,7 @@
 drop view dim_comprador;
-create view dim_comprador as (
+create materialized view dim_comprador as (
 	select 
-		md5(concat(query.nit,query.nombre)) as id_comprador,
+		concat(query.nit,query.nombre) as id_comprador,
 		query.*
 	from (
 		select
@@ -15,7 +15,7 @@ create view dim_comprador as (
 			end origen_fondos
 		from ( 
 			select distinct *
-			from raw_compradores_test1
+			from raw_compradores
 		) a
 	) query
 );
