@@ -30,8 +30,8 @@ CREATE TABLE raw_proveedores (
 CREATE TABLE  raw_compradores(
 	entidad_superior varchar(256),
 	departamento varchar(256), 
+	nit varchar(256),
 	origen_fondos varchar(256),
 	nombre varchar(256),
-	municipio varchar(256),
-	nit varchar(256)
+	municipio varchar(256)
 );

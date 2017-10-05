@@ -1,12 +1,14 @@
-drop view dim_comprador;
+drop materialized view dim_comprador;
 create materialized view dim_comprador as (
 	select 
-		concat(query.nit,query.nombre) as id_comprador,
+		concat(query.nit,'|',query.nombre) as id_comprador,
 		query.*
 	from (
 		select
 			upper(a.nit) as nit,
 			concat(upper(a.municipio),'|',upper(a.departamento)) as id_ubicacion,
+			case 
+				when nit = '4251393' and then 
 			upper(a.nombre) as nombre,
 			upper(a.entidad_superior) as entidad_superior,
 			case 
