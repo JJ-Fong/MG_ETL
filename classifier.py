@@ -30,10 +30,11 @@ class Classifier:
         for x in self.municipio:
             val = Levenshtein.ratio(value,x)
             if (val > minratio):
-                rvalue = x
-                minratio = value
+                rvalue = x.strip()
+                minratio = val
             if (val == 1):
-                return x
+                return x.strip()
+        print value, rvalue
         return rvalue
 
     def byDepartamento(self, value):
@@ -43,10 +44,10 @@ class Classifier:
         for x in self.departamento:
             val = Levenshtein.ratio(value,x)
             if (val > minratio):
-                rvalue = x
-                minratio = value
+                rvalue = x.strip()
+                minratio = val
             if (val == 1):
-                return x
+                return x.strip()
         return rvalue
 
     def byCategoria(self, value):
@@ -56,8 +57,8 @@ class Classifier:
         for x in self.categoria:
             val = Levenshtein.ratio(value,x)
             if (val > minratio):
-                rvalue = x
-                minratio = value
+                rvalue = x.strip()
+                minratio = val
             if (val == 1):
-                return x
+                return x.strip()
         return rvalue

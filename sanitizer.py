@@ -60,9 +60,10 @@ class mySanitizer:
         return datetime.strptime(datestr, '%d%m%Y')
 
     def textformat(self, value):
-        value = value.decode('utf8')
+        value = value.decode('utf-8')
         value = value.upper().strip()
         value = value.replace("\"","")
+        value = value.replace("","")
         return value
 
     def numberformat(self, value):
