@@ -7,6 +7,40 @@
 				"Data/2016/05/proveedores.csv",
 				"Data/2016/06/proveedores.csv"
 			]
+		},
+		{
+			"schema": "raw_compradores",
+			"files": [
+				"Data/2016/01/compradores.csv",
+				"Data/2016/02/compradores.csv",
+				"Data/2016/03/compradores.csv",
+				"Data/2016/04/compradores.csv",
+				"Data/2016/05/compradores.csv",
+				"Data/2016/06/compradores.csv",
+				"Data/2016/07/compradores.csv",
+				"Data/2016/08/compradores.csv",
+				"Data/2016/09/compradores.csv",
+				"Data/2016/10/compradores.csv",
+				"Data/2016/11/compradores.csv",
+				"Data/2016/12/compradores.csv"
+			]
+		},
+		{
+			"schema": "raw_adjudicaciones",
+			"files": [
+				"Data/2016/01/adjudicaciones.csv",
+				"Data/2016/02/adjudicaciones.csv",
+				"Data/2016/03/adjudicaciones.csv",
+				"Data/2016/04/adjudicaciones.csv",
+				"Data/2016/05/adjudicaciones.csv",
+				"Data/2016/06/adjudicaciones.csv",
+				"Data/2016/07/adjudicaciones.csv",
+				"Data/2016/08/adjudicaciones.csv",
+				"Data/2016/09/adjudicaciones.csv",
+				"Data/2016/10/adjudicaciones.csv",
+				"Data/2016/11/adjudicaciones.csv",
+				"Data/2016/12/adjudicaciones.csv"
+			]
 		}
 	]
 }	
