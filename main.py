@@ -88,8 +88,6 @@ for f in files["files"]:
                                         records[(cv*rosize)+cc].append(nv) 
                                     cv += 1
                             for rec in records:
-                                if (('41160630' in rec) and ('SAN PEDRO CARCHá' in rec)):
-                                    print rec, row
                                 wr.writerow(rec)
                             count += 1
                             
