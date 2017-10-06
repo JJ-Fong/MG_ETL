@@ -12,7 +12,27 @@ create materialized view dim_fecha as (
 			when (date_part('month', a.fecha) = 4) then 'ABRIL'
 			when (date_part('month', a.fecha) = 5) then 'MAYO'
 			when (date_part('month', a.fecha) = 6) then 'JUNIO'
-				when (date_part('month', a.fecha) = 7) then 'JULIO'	
+			when (date_part('month', a.fecha) = 7) then 'JULIO' 
+			when (date_part('month', a.fecha) = 8) then 'AGOSTO' 
+			when (date_part('month', a.fecha) = 9) then 'SEPTIEMBRE' 
+			when (date_part('month', a.fecha) = 10) then 'OCTUBRE' 
+			when (date_part('month', a.fecha) = 11) then 'NOVIEMBRE' 
+			when (date_part('month', a.fecha) = 12) then 'DICIEMBRE' 
+		end mes_nombre, 
+		case 
+			when (date_part('month', a.fecha) = 1) then 'ENE' 
+			when (date_part('month', a.fecha) = 2) then 'FEB' 
+			when (date_part('month', a.fecha) = 3) then 'MAR' 
+			when (date_part('month', a.fecha) = 4) then 'ABR' 
+			when (date_part('month', a.fecha) = 5) then 'MAY' 
+			when (date_part('month', a.fecha) = 6) then 'JUN' 
+			when (date_part('month', a.fecha) = 7) then 'JUL' 
+			when (date_part('month', a.fecha) = 8) then 'AGO' 
+			when (date_part('month', a.fecha) = 9) then 'SEP' 
+			when (date_part('month', a.fecha) = 10) then 'OCT' 
+			when (date_part('month', a.fecha) = 11) then 'NOV' 
+			when (date_part('month', a.fecha) = 12) then 'DIC' 
+		end mes_nombre_corto, 
 	--	as ano_mes,
 		date_part('day', a.fecha) as dia_numero,
 		case
