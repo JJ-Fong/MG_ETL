@@ -63,7 +63,7 @@ class mySanitizer:
         value = value.decode('utf-8')
         value = value.upper().strip()
         value = value.replace("\"","")
-        value = value.replace("","")
+        value = value.replace("|","")
         return value
 
     def numberformat(self, value):

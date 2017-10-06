@@ -34,7 +34,6 @@ class Classifier:
                 minratio = val
             if (val == 1):
                 return x.strip()
-        print value, rvalue
         return rvalue
 
     def byDepartamento(self, value):
