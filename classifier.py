@@ -11,11 +11,11 @@ class Classifier:
         self.departamento = []
         self.categoria = []
 
-        with open('municipios.txt') as munf:
+        with open('Catalogs/municipios.txt') as munf:
             self.municipio = munf.readlines()
-        with open('departamentos.txt') as depf:
+        with open('Catalogs/departamentos.txt') as depf:
             self.departamento = depf.readlines()
-        with open('categorias.txt') as catf:
+        with open('Catalogs/categorias.txt') as catf:
             self.categoria = catf.readlines()
 
 

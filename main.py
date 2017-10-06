@@ -5,15 +5,17 @@ from sanitizer import *
 import uuid
 from collections import defaultdict
 from datetime import datetime
+import os.path
+
 
 #Instancia del sanitizador
 sanitizer = mySanitizer() 
-
+file_path = 'C:\Users\Javier Fong\Documents\Universidad\CICLO 10\Megaproyecto\Repository\Consolidated Data'
 #Carga de JSON con los esquemas de los modelos crudos
-with open('schemas.json') as schemasf:
+with open('json/schemas.json') as schemasf:
     schemasj = json.load(schemasf)
 #Carga de JSON con la informacion de los archivos a consolidar
-with open('files.json') as filesf:
+with open('json/files.json') as filesf:
     files = json.load(filesf)
 
 #Se ingresan los esquemas a un diccionario para su rapida lectura
@@ -56,7 +58,8 @@ for f in files["files"]:
                     i += 1
                 #Empieza escritura de nuevo csv consolidado
                 if (flag):
-                    with open(str(idn)+'.csv', 'ab') as newfile:
+                    file_name = os.path.join(file_path,idn)+".csv"
+                    with open(file_name, 'ab') as newfile:
                         wr = csv.writer(newfile, delimiter='|')
                         #wr.writerow(fieldName)
                         count = 0 
