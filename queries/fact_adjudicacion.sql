@@ -6,7 +6,7 @@ create materialized view fact_adjudicacion as (
 	from (
 		select 
 			case 
-				when nog = '4734157' then concat(upper(a.nit_comprador),'|OFICINA MUNICIPAL DE PLANIFICACIÓN')
+				when nog in ('4734157','4747577') then concat(upper(a.nit_comprador),'|OFICINA MUNICIPAL DE PLANIFICACIÓN')
 				else concat(upper(a.nit_comprador),'|',upper(a.nombre_comprador)) 
 			end id_comprador, 
 			upper(a.nit_proveedor) as id_proveedor,

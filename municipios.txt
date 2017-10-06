@@ -1,4 +1,4 @@
-Cobán
+﻿Cobán
 San Pedro Carchá
 San Juan Chamelco
 San Cristóbal Verapaz
@@ -88,7 +88,7 @@ San Vicente Pacaya
 Santa Lucía Cotzumalguapa
 Siquinalá
 Nueva Concepción
-Guatemala Ciudad
+Guatemala
 Santa Catarina Pinula
 San José Pinula
 San José del Golfo
