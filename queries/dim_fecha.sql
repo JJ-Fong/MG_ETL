@@ -67,5 +67,28 @@ create materialized view dim_fecha as (
 		select fecha_presentacion_ofertas as fecha from raw_adjudicaciones where not (fecha_presentacion_ofertas is null)
 		union
 		select inscripcion_rm as fecha from raw_proveedores where not (inscripcion_rm is null)
+		--Fechas agregadas manualmente
+		union
+		select '2016-07-10' as fecha
+		union
+		select '2016-05-25' as fecha
+		union
+		select '2007-10-18' as fecha
+		union
+		select '2016-04-14' as fecha
+		union
+		select '2016-08-22' as fecha
+		union
+		select '2016-05-30' as fecha
+		union
+		select '2016-05-23' as fecha
+		union
+		select '2016-09-06' as fecha
+		union
+		select '2016-04-14' as fecha
+		union
+		select '2014-04-11' as fecha
+		union
+		select '1500-01-01' as fecha
 	) a
 )
