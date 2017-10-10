@@ -1,14 +1,14 @@
 Alimentos y semillas
-Computacion y telecomunicaciones
-Construccion y materiales afines
+Computación y telecomunicaciones
+Construcción y materiales afines
 Electricidad y aire acondicionado
-Limpieza, fumigacion y artículos afines
+Limpieza, fumigación y artículos afines
 Muebles y mobiliario de oficina
-Papeleria y articulos de libreria
+Papelería y artículos de libreria
 Publicidad, campañas y vallas
 Salud e insumos hospitalarios
 Seguridad y armamento
 Seguros, fianzas y servicios bancarios
 Textiles, ropa y calzado
 Transporte, repuestos y combustibles
-Otros tipos de bienes o servicios
+Otros tipos de bienes o servicios 

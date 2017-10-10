@@ -19,16 +19,16 @@ class Classifier:
             self.categoria = catf.readlines()
 
 
-        self.municipio = [x.upper().strip() for x in self.municipio]
-        self.departamento = [x.upper().strip() for x in self.departamento]
-        self.categoria = [x.upper().strip() for x in self.categoria]
+        self.municipio = [x.decode('latin-1').upper().strip() for x in self.municipio]
+        self.departamento = [x.decode('latin-1').upper().strip() for x in self.departamento]
+        self.categoria = [x.decode('latin-1').upper().strip() for x in self.categoria]
 
     def byMunicipio(self, value):
         minratio = 0
         rvalue = value
         c = 0
         for x in self.municipio:
-            val = Levenshtein.ratio(value,x)
+            val = Levenshtein.ratio(value,x.encode('utf-8'))
             if (val > minratio):
                 rvalue = x.strip()
                 minratio = val
@@ -41,7 +41,7 @@ class Classifier:
         rvalue = value
         c = 0
         for x in self.departamento:
-            val = Levenshtein.ratio(value,x)
+            val = Levenshtein.ratio(value,x.encode('utf-8'))
             if (val > minratio):
                 rvalue = x.strip()
                 minratio = val
@@ -54,7 +54,7 @@ class Classifier:
         rvalue = value
         c = 0
         for x in self.categoria:
-            val = Levenshtein.ratio(value,x)
+            val = Levenshtein.ratio(value,x.encode('utf-8'))
             if (val > minratio):
                 rvalue = x.strip()
                 minratio = val
